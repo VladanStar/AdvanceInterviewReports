@@ -9,9 +9,11 @@ import { faEye,  faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { deleteReport } from "../../../../services/deleteReport";
 import { filterReport } from "../../../../Data/filterReports";
+
+
 const ReportsUI = ({ reports, value, search }) => {
   const filteredReports = filterReport(reports, value);
-  console.log(filteredReports)
+  // console.log(filteredReports)
   const token = sessionStorage.getItem('token');
   const [modal,setModal] = useState(null);
   const close = () => {
