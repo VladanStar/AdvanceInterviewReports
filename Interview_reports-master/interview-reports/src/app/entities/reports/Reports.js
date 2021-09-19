@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState, useCallback } from "react";
 import getReports from "../../../services/getReport";
 import Loader from "../../components/Loader/Loader";
 import ReportsUI from "./reportsUI/ReportsUI";
@@ -9,14 +9,14 @@ const Reports = () => {
   const [value, setValue] = useState('');
   const [loading, setLoading] = useState(true);
  
-  async function getData() {
+  const getData = useCallback(async function() {
     let data = await getReports(token);
     if(data) {
       setReports(data);
       setLoading(false);
     }
-  }
-  useEffect(()=>{getData()});
+  },[token]);
+  useEffect(()=>{getData()},[getData]);
   const search = (e) =>{
     setValue(e.target.value);
   }

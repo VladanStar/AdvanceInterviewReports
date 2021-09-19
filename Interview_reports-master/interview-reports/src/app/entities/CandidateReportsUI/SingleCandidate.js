@@ -12,10 +12,9 @@ const SingleCandidate = ({ candidate, reports }) => {
   const [modalObj, setModalObj] = useState({});
   const closedModal =()=>{
     setIsView(false)
-  }
-  console.log(modalObj)
+  };
   const img =
-    "https://clinicforspecialchildren.org/wp-content/uploads/2016/08/avatar-placeholder.gif";
+    "https://w7.pngwing.com/pngs/340/956/png-transparent-profile-user-icon-computer-icons-user-profile-head-ico-miscellaneous-black-desktop-wallpaper.png";
   return (
     <main>
         {isView && <Modalset modalObj={modalObj} closed={closedModal}/>}
@@ -38,13 +37,12 @@ const SingleCandidate = ({ candidate, reports }) => {
           </Col>
         </Row>
         <Table className="mt-5">
-          <thead className="opacity">
+          <thead>
             <tr>
               <th>#</th>
               <th>Company</th>
               <th>Interview date</th>
               <th>Status</th>
-              <th>View</th>
             </tr>
             {reports.map((report, index) => {
                 return(
@@ -52,8 +50,7 @@ const SingleCandidate = ({ candidate, reports }) => {
                         <th>{index+1}</th>
                         <th>{report.companyName}</th>
                         <th>{SetDate(report.interviewDate)}</th>
-                        <th>{report.status}</th>
-                        <th>{<button onClick={()=>{setModalObj(report); setIsView(true)}}><FontAwesomeIcon icon={faEye}/></button>}</th>
+                        <th>{report.status} <button className="styleButton" onClick={()=> {setModalObj(report); setIsView(true)}}><FontAwesomeIcon icon={faEye}/></button></th>
                     </tr>
                 )
             })}
