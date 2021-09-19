@@ -1,0 +1,21 @@
+.name,
+.email {
+    text-align: center;
+}
+
+.imageavatar {
+    width: 50%;
+    margin: 10px auto;
+    border-radius: 300px;
+    overflow: hidden;
+}
+
+.cardsize {
+    width: 25%;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

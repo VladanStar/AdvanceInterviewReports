@@ -1,0 +1,14 @@
+.body{
+    display:flex;
+   
+  }
+  .body p{
+     color:rgb(172, 164, 164);
+  }
+  
+  .info{
+      margin:20px;
+  }
+  .notes{
+      margin:20px;
+  }

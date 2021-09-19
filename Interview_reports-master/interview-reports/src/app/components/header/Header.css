@@ -1,0 +1,23 @@
+.navStyle{
+    background-color: seagreen;
+    text-align: center;
+    color: khaki;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+button {
+    background-color: khaki;
+    color: seagreen;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+.float {
+    background-color: khaki;
+    color: seagreen;
+    border-radius: 10px;
+    margin-left: 20px;
+    padding: 2px 10px;
+}
+.IntBook{
+    color: khaki!important;
+}

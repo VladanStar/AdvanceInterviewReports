@@ -1,0 +1,10 @@
+img {
+    width: 100% !important;
+  }
+  .radiusShadow {
+    width: 20rem;
+    border-radius: 10%;
+    border: seagreen solid 1px!important;
+    /*-webkit-box-shadow: 2px 3px 10px 9px seagreen; 
+  box-shadow: 2px 3px 10px 9px seagreen;*/
+  }

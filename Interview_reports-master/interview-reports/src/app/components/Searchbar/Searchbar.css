@@ -1,0 +1,9 @@
+.i{
+    margin-bottom: 10px;
+}
+.i > i{
+    margin-right: 10px;
+}
+.i > input {
+    border: none !important;
+}
