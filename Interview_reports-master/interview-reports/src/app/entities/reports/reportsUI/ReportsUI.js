@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Container, Table } from "react-bootstrap";
-// import { formatDate } from "../../../../Data/formatDate";
 import SetDate from "../../../../Data/SetDate";
 import Modalset from "../../../components/modal/Modal";
 import SearchBar from "../../../components/Searchbar/Searchbar";
@@ -13,17 +12,15 @@ import { filterReport } from "../../../../Data/filterReports";
 
 const ReportsUI = ({ reports, value, search }) => {
   const filteredReports = filterReport(reports, value);
-  // console.log(filteredReports)
-  const token = sessionStorage.getItem('token');
-  const [modal,setModal] = useState(null);
+  const token = sessionStorage.getItem("token");
+  const [modal, setModal] = useState(null);
   const close = () => {
-      setModal(null);
+    setModal(null);
   };
   return (
     <main>
-        
       <Container>
-          {modal && <Modalset closed={close} modalObj={modal} />}
+        {modal && <Modalset closed={close} modalObj={modal} />}
         <SearchBar value={value} search={search} />
         <Table className="mt-5">
           <thead>
@@ -40,8 +37,24 @@ const ReportsUI = ({ reports, value, search }) => {
                   <th>{report.candidateName}</th>
                   <th>{SetDate(report.interviewDate)}</th>
                   <th>
-                    {report.status} <div className="fRight">
-                    <button className="styleReportButton" onClick={()=>{setModal(report);}} ><FontAwesomeIcon icon={faEye} /></button><button className="styleReportButton" onClick={()=>{deleteReport(token, report.id)}}><FontAwesomeIcon icon={faTrashAlt} /></button>
+                    {report.status}
+                    <div className="fRight">
+                      <button
+                        className="styleReportButton"
+                        onClick={() => {
+                          setModal(report);
+                        }}
+                      >
+                        <FontAwesomeIcon icon={faEye} />
+                      </button>
+                      <button
+                        className="styleReportButton"
+                        onClick={() => {
+                          deleteReport(token, report.id);
+                        }}
+                      >
+                        <FontAwesomeIcon icon={faTrashAlt} />
+                      </button>
                     </div>
                   </th>
                 </tr>
@@ -54,4 +67,4 @@ const ReportsUI = ({ reports, value, search }) => {
   );
 };
 
-export default ReportsUI
+export default ReportsUI;
