@@ -1,0 +1,85 @@
+span{
+    border: 1px solid black;
+    margin-right: 10px;
+    padding: 7px 12px;
+    border-radius: 50%;
+}
+.currentStep{
+    font-weight: bold;
+}
+.currentStep > span {
+    border: 2px solid black;
+}
+
+.img{
+    width: 20% !important;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.bgColor{
+    background-color: rgb(35, 139, 139);
+}
+.bgColor:active{
+    border: 2px solid black;
+}
+.bgColor:hover{
+    background-color: rgb(31, 187, 187);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.buttonNext{
+    width: 10%;
+    margin-left: 10px;
+    margin-right: 20px;
+    background-color: blue;
+}
+.leftBorder{
+    border-left: 3px solid rgb(22, 22, 22);
+}
+.divButton{
+    text-align: right;
+    margin-bottom: 10px;
+}
+.listCompany{
+    background-color: rgb(35, 139, 139);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px;
+}
+
+.listCompany:hover{
+    background-color: rgb(31, 187, 187);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.listCompany:active{
+    border: 2px solid black;
+}
+
+select{
+    width: 100%;
+    height: 2em;
+    border-radius: 5px;
+}
+.inputStyle{
+    width: 100% !important;
+    margin: 0px !important;
+}
+textarea{
+    width: 100%;
+    margin-top: 10px;
+}
+.alert{
+    border: 1px solid black;
+    display: flex;
+    width: 30%;
+    margin: 0 auto;
+    position: absolute;
+    left: 33%;
+    top: 40px;
+    color: rgb(243, 39, 39) ;
+    background-color: rgb(22, 22, 22, 0.6);
+    font-size: 40px;
+}

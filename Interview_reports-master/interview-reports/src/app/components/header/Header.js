@@ -1,36 +1,34 @@
+import { faClipboardList, faHome, faPlusCircle, faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Container, Navbar, Nav } from "react-bootstrap";
-import {Link, useLocation} from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 const Header = ({ logOut }) => {
-  let location = useLocation();
-  if(location.pathname === "/login") {
-     return <div></div>
-  }
   return (
     <header>
       <Navbar className="navStyle" expand="lg">
         <Container>
-          <Navbar.Brand href="#home" className="IntBook">Interview Book</Navbar.Brand>
+          <Navbar.Brand href="/">Interview Reports</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse
             id="basic-navbar-nav"
-            className="d-flex justify-content-end"
           >
-            <Nav className="d-flex align-items-center">
-              <Link to="/" className="float">
+            <Nav  className="ms-auto align-items-center">
+              <Link to="/" className="btn btn-outline-info mar">
+                <FontAwesomeIcon icon={faHome}/>
                 Home
               </Link>
-              <Link to="/reports" className="float">
+              <Link to="/reports" className="btn btn-outline-info mar">
+              <FontAwesomeIcon icon={faClipboardList}/> 
                 Reports
               </Link>
-              <Link to="/createReport" className="float">
+              <Link to="/createReport" className="btn btn-outline-info mar">
+              <FontAwesomeIcon icon={faPlusCircle}/>
                 Create Report
               </Link>
-              <button onClick={logOut}>Logout</button>
-              {/* <Nav.Link href="/">Home</Nav.Link>
-        <Nav.Link href="#link">Link</Nav.Link> */}
+              <button onClick={logOut} type="button" className="btn btn-outline-info">Logout<FontAwesomeIcon icon={faSignOutAlt}/></button>
             </Nav>
           </Navbar.Collapse>
         </Container>
