@@ -1,9 +1,9 @@
 import React, { Fragment, useEffect, useState } from "react";
 import getCandidates from "../../../services/getCandidates";
 import getReports from "../../../services/getReport";
+import Loader from "../../components/Loader/Loader";
 import "./Candidate.css";
 import SingleCandidate from "../CandidateReportsUI/SingleCandidate";
-import Loader from "../../components/Loader/Loader"
 
 const Candidate = ({ match }) => {
   const id = parseInt(match.params.id);
@@ -14,7 +14,6 @@ const Candidate = ({ match }) => {
   const onGetCandidates = () => {
     const get = async () => {
       const candidates = await getCandidates(token);
-      console.log(candidates);
       candidates.forEach((candidate) => {
         if (candidate.id === id) {
           setCandidate(candidate);
